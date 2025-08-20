@@ -1,1 +1,1 @@
-This will be my personal website
+if you're reading this you're cool
