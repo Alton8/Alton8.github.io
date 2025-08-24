@@ -12,7 +12,7 @@ div {
 }
 .quicklinks {
   font-family: "Inter", "DM Sans", Arial, sans-serif;
-  text-decoration:none;
+  text-decoration: none;
   display: inline-flex;
   text-align: center;
   justify-content: center;
@@ -30,6 +30,9 @@ div {
 p, li, .hometext, h1, #clock {
   color: #E7EBEA;
 }
+.homeText {
+  text-align: center;
+}
 .image {
   width: 450px;
 }
@@ -39,3 +42,34 @@ p, li, .hometext, h1, #clock {
   background-color: #164c45;
 }
 
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+#intro {
+  animation: 1.5s fadeInUp;
+}
+#learnMore {
+  opacity: 0; 
+  text-align: center;
+  display: block;
+  animation: 1s fadeInUp forwards; 
+  animation-delay: 2.25s; 
+  margin-top: 15px;
+  color: #E7EBEA
+}
+.homeImage {
+  display: block;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  max-width: 50%;
+}
