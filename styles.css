@@ -67,9 +67,10 @@ p, li, .hometext, h1, #clock {
 }
 .homeImage {
   display: block;
-  margin-top: 5%;
+  margin-top: 2.5%;
   margin-left: auto;
   margin-right: auto;
   height: auto;
+  border-radius: 10px;
   max-width: 50%;
 }
