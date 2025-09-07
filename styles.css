@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
+
+body {
+    font-family: "Inter", "DM Sans", Arial, sans-serif;
+    background-color: #0e3530  ;
+}
+
+#navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quicklinks {
+  font-family: "Inter", "DM Sans", Arial, sans-serif;
+  text-decoration: none;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  color: #E7EBEA;
+  margin-left: 15px;
+  cursor: crosshair;
+  width: 55px;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+p, li, .hometext, h1, h2, #clock {
+  color: #E7EBEA;
+}
+.homeText {
+  text-align: center;
+}
+.image {
+  width: 450px;
+}
+.quicklinks:hover {
+  transform: scale(1.05);
+  color: #FFFFFF;
+  background-color: #164c45;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes slide-left {
+  0% {
+    margin-left: 100%;
+  }
+
+  100% {
+    margin-left: 0%;
+  }
+}
+.homeBulletPoints {
+  opacity: 0; 
+  animation: 1s 
+  fadeInUp forwards;
+  animation-delay: 1s;
+  text-align: center;
+}
+.scroll-container {
+  width: 13px;        /* Small visible space */
+  overflow: hidden;    /* Hide overflowing emojis */
+  margin-left: 3px;
+}
+
+.scroll-track {
+  display: flex;
+  width: max-content;  /* Shrinks to fit content */
+  will-change: transform;
+  animation: scroll-left 2s linear infinite;
+}
+
+.running {
+  display: inline-block;
+  font-size: 1.35rem;
+  overflow: hidden;
+  width: max-content;
+  margin-right: 2px;
+  margin-top: 12px;
+  position: relative;
+  animation: scroll-emoji 1s linear infinite;
+}
+
+@keyframes scroll-emoji {
+  from { transform: translateX(0); }
+  to { transform: translateX(-210%); }
+}
+#learnMore {
+  opacity: 0; 
+  text-align: center;
+  display: block;
+  animation: 1s fadeInUp forwards; 
+  animation-delay: 1.3s; 
+  margin-top: 15px;
+  color: #E7EBEA
+}
+#helloText {
+  opacity: 0; 
+  animation: 1s 
+  fadeInUp forwards;
+  animation-delay: 0.3s;
+  text-align: center;
+}
+#reading {
+  opacity: 0; 
+  animation: 1s fadeInUp forwards;
+  animation-delay: -0.3s;
+}
+.homeImage {
+  display: block;
+  margin-top: 2.5%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  border-radius: 10px;
+  max-width: 50%;
+}
