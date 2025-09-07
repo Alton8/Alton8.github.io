@@ -52,6 +52,15 @@ p, li, .hometext, h1, h2, #clock {
     opacity: 1;
   }
 }
+@keyframes slide-left {
+  0% {
+    margin-left: 100%;
+  }
+
+  100% {
+    margin-left: 0%;
+  }
+}
 .homeBulletPoints {
   opacity: 0; 
   animation: 1s 
@@ -59,7 +68,34 @@ p, li, .hometext, h1, h2, #clock {
   animation-delay: 1s;
   text-align: center;
 }
+.scroll-container {
+  width: 13px;        /* Small visible space */
+  overflow: hidden;    /* Hide overflowing emojis */
+  margin-left: 3px;
+}
 
+.scroll-track {
+  display: flex;
+  width: max-content;  /* Shrinks to fit content */
+  will-change: transform;
+  animation: scroll-left 2s linear infinite;
+}
+
+.running {
+  display: inline-block;
+  font-size: 1.35rem;
+  overflow: hidden;
+  width: max-content;
+  margin-right: 2px;
+  margin-top: 12px;
+  position: relative;
+  animation: scroll-emoji 1s linear infinite;
+}
+
+@keyframes scroll-emoji {
+  from { transform: translateX(0); }
+  to { transform: translateX(-210%); }
+}
 #learnMore {
   opacity: 0; 
   text-align: center;
@@ -75,6 +111,11 @@ p, li, .hometext, h1, h2, #clock {
   fadeInUp forwards;
   animation-delay: 0.3s;
   text-align: center;
+}
+#reading {
+  opacity: 0; 
+  animation: 1s fadeInUp forwards;
+  animation-delay: -0.3s;
 }
 .homeImage {
   display: block;
