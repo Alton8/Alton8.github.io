@@ -110,28 +110,52 @@ p, li, .homeText, .hometext, h1, h2, #clock { color: var(--fg); }
 }
 
 /* ===== Running emoji scroller ===== */
-.scroll-container{
-  width: 1.25rem;     /* tiny visible window */
-  overflow: hidden;
-  margin-left: 0.25rem;
+/* List layout: number | icon (fixed) | text (flex) */
+.hobby-list{
+  list-style: decimal;
+  padding-left: 1.25rem;   /* space for numbers */
+  margin: 0 0 1rem 0;
 }
-
-.scroll-track{
+.hobby-list > li{
   display: flex;
-  width: max-content;
-  will-change: transform;
-  animation: scroll-left 2s linear infinite; /* keyframes defined below */
+  align-items: center;
+  gap: 0.55rem;            /* space between icon and label */
+  margin: 0.25rem 0;
 }
 
+/* Fixed-width icon box used by ALL rows */
+.hobby-list .icon{
+  flex: 0 0 1.6em;         /* same width for every row */
+  width: 1.6em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;
+}
+
+/* === Your scroller (patched to match the icon box) === */
+.scroll-container{
+  width: 1.6em;            /* match .icon width */
+  overflow: hidden;
+  margin: 0;               /* remove left offset that caused misalignment */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.scroll-track{
+  display: inline-flex;
+  will-change: transform;
+}
 .running{
   display: inline-block;
-  font-size: 1.35rem;
-  width: max-content;
-  margin-right: 2px;
-  margin-top: 0.25rem;
-  position: relative;
-  animation: scroll-emoji 1s linear infinite;
+  font-size: 1em;          /* fit inside 1.6em box */
+  line-height: 1;
+  margin: 0 25px 0 0;
+  animation: scroll-emoji 0.5s linear infinite;
 }
+
+
 
 /* ===== Imagery ===== */
 .homeImage{
