@@ -4,6 +4,9 @@
 
 
     <html>
+    <style>
+        body { visibility: hidden; opacity: 0; }
+    </style>
     <body>
         <div id = "navBar">
             <span><a class = "quicklinks" href = "index.html">Home</a></span>
@@ -44,6 +47,10 @@
         </div>
         <span style = "margin-left: 5px; color: #E7EBEA;font-style: italic"> Local Time: </span>
         <span style = "margin-left: 5px; font-style: italic" id="clock">5:00:00</span>
+        <script>
+            document.body.style.visibility = 'visible';
+            document.body.style.opacity = 1;
+        </script>
         </body>
 </html>
 

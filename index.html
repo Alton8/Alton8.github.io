@@ -5,6 +5,9 @@
     <html>
     <head>
         <title>My Website</title>
+    <style>
+        body { visibility: hidden; opacity: 0; }
+    </style>
     </head>
         <body>
             <div id = "navBar">
@@ -30,6 +33,10 @@
             <!-- <img class = "homeImage" style="opacity: 50%; width: auto" src="coezoom1.jpg"> -->
             <p class = "homeText" style = "opacity: 0; animation: 1s fadeInUp forwards; animation-delay: 1.6s; font-style: italic; margin-top: 2.5%"> Because if you're not going to believe in yourself, who is? - Yaseen Abdalla</p>
             <p id = "photoCredits"> photo by my friend Kenneth :) </p>
+            <script>
+                document.body.style.visibility = 'visible';
+                document.body.style.opacity = 1;
+            </script>
         </body>
 
 </html>
