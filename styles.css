@@ -27,17 +27,23 @@ body{
   line-height: 1.5;
 }
 
+/* Safety net if anything else causes horizontal scroll */
+html, body { overflow-x: hidden; }
+
 /* Make sure text colors apply consistently */
-p, li, .homeText, h1, h2, #clock { color: var(--fg); }
+p, li, .homeText, .hometext, h1, h2, #clock { color: var(--fg); }
 
 /* ===== Typography ===== */
 #intro { font-size: clamp(1.25rem, 1rem + 2vw, 2rem); }
-#helloText { 
+
+#helloText{
   font-size: clamp(1.75rem, 1.25rem + 3vw, 2.5rem);
   opacity: 0;
   animation: fadeInUp 1s forwards;
   animation-delay: 0.3s;
+  text-align: center;
 }
+
 .aboutMe{
   font-family: "Inter", "DM Sans", Arial, sans-serif;
   margin-inline: 0.5rem;
@@ -48,11 +54,12 @@ p, li, .homeText, h1, h2, #clock { color: var(--fg); }
 #navBar{
   margin-top: 0;                 /* consistent across pages */
   display: flex;
-  flex-wrap: wrap;               /* wrap on small screens */
+  flex-wrap: wrap;               /* <<< key: allow wrapping on phones */
   justify-content: center;
   align-items: center;
-  gap: 0.7rem;
-  padding: 0.75rem 1rem;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  max-width: 100%;
 }
 
 .quicklinks{
@@ -67,17 +74,21 @@ p, li, .homeText, h1, h2, #clock { color: var(--fg); }
   cursor: pointer;               /* better affordance than crosshair */
   width: auto;                   /* let content define width */
   font-size: 1rem;
-  padding: 0.7rem 0.9rem;        /* touch-friendly */
+  padding: 0.6rem 0.8rem;        /* touch-friendly */
   transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
   position: relative;
   overflow: hidden;
+  margin: 0;                     /* no auto margins that push layout */
+  white-space: nowrap;           /* keep short labels on one line */
   outline: none;
 }
+
 .quicklinks:hover{
   transform: translateY(-1px) scale(1.03);
   color: #FFFFFF;
   background-color: var(--accent);
 }
+
 .quicklinks:focus-visible{
   box-shadow: 0 0 0 3px rgba(22,76,69,0.45);
   background-color: rgba(22,76,69,0.25);
@@ -101,12 +112,14 @@ p, li, .homeText, h1, h2, #clock { color: var(--fg); }
   overflow: hidden;
   margin-left: 0.25rem;
 }
+
 .scroll-track{
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: scroll-left 2s linear infinite; /* FIX: keyframes now exist */
+  animation: scroll-left 2s linear infinite; /* keyframes defined below */
 }
+
 .running{
   display: inline-block;
   font-size: 1.35rem;
@@ -149,7 +162,9 @@ p, li, .homeText, h1, h2, #clock { color: var(--fg); }
   margin-top: 1rem;
   color: var(--fg);
 }
+
 .typewrite{ font-size: 1rem; }
+
 #reading{
   opacity: 0;
   animation: fadeInUp 1s forwards;
@@ -161,11 +176,13 @@ p, li, .homeText, h1, h2, #clock { color: var(--fg); }
   0% { transform: translateY(15%); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
 }
-/* FIX: previously missing scroll-left (used margin-left). Use transform for smoother GPU anim. */
+
+/* Smooth horizontal scroll for emoji track */
 @keyframes scroll-left{
   from { transform: translateX(0); }
   to   { transform: translateX(-100%); }
 }
+
 @keyframes scroll-emoji{
   from { transform: translateX(0); }
   to   { transform: translateX(-210%); }
@@ -173,13 +190,22 @@ p, li, .homeText, h1, h2, #clock { color: var(--fg); }
 
 /* ===== Responsive tweaks ===== */
 @media (max-width: 600px){
-  #navBar{ padding: 0.5rem 0.75rem; gap: 0.5rem; }
-  .quicklinks{ padding: 0.6rem 0.8rem; font-size: 0.95rem; }
+  #navBar{ padding: 0.5rem; gap: 0.45rem; }
+  .quicklinks{ padding: 0.5rem 0.7rem; font-size: 0.95rem; }
   .aboutMe{ margin-inline: 0.75rem; }
   #photoCredits{
     position: static;            /* avoid overlaying content on small screens */
     text-align: center;
     margin: 1rem 0;
+  }
+}
+
+/* Extra-small phones: allow 2-column nav if needed */
+@media (max-width: 360px){
+  .quicklinks{
+    flex: 1 1 calc(50% - 0.5rem);  /* two columns */
+    white-space: normal;            /* allow wrap if labels are long */
+    text-align: center;
   }
 }
 
