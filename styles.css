@@ -8,7 +8,6 @@ body {
     background-position: center;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
-    overflow: hidden;
 
     margin: 0; /* Remove default body margin */
 }
@@ -17,7 +16,7 @@ html, body {
 }
 .aboutMe {
   font-family: "Inter", "DM Sans", Arial, sans-serif;
-  margin-left: 5px;  
+  margin-left: 0.5%;  
   font-size: 16px;
 }
 #navBar {
@@ -27,20 +26,18 @@ html, body {
   align-items: center;
 }
 #intro {
-  font-size: 18px;
+  font-size: 2rem;
 }
 .quicklinks {
   font-family: "Inter", "DM Sans", Arial, sans-serif;
-  font-size: 24px;
   text-decoration: none;
   display: inline-flex;
   text-align: center;
   justify-content: center;
   color: #E7EBEA;
-  margin-left: 15px;
+  margin-left: 0.7rem;
   cursor: crosshair;
-  width: 55px;
-  border-radius: 12px;
+  width: 4rem;
   font-size: 1rem;
   transition: all 0.3s ease;
   padding: 1rem;
@@ -53,9 +50,9 @@ p, li, .hometext, h1, h2, #clock {
 .homeText {
   text-align: center;
 }
-.image {
+/* .image {
   width: 450px;
-}
+} */
 .quicklinks:hover {
   transform: scale(1.05);
   color: #FFFFFF;
@@ -90,9 +87,9 @@ p, li, .hometext, h1, h2, #clock {
   text-align: center;
 }
 .scroll-container {
-  width: 13px;        /* Small visible space */
+  width: 0.5rem;        /* Small visible space */
   overflow: hidden;    /* Hide overflowing emojis */
-  margin-left: 3px;
+  margin-left: 0.2%;
 }
 
 .scroll-track {
@@ -108,7 +105,7 @@ p, li, .hometext, h1, h2, #clock {
   overflow: hidden;
   width: max-content;
   margin-right: 2px;
-  margin-top: 12px;
+  margin-top: 1%;
   position: relative;
   animation: scroll-emoji 1s linear infinite;
 }
@@ -123,7 +120,7 @@ p, li, .hometext, h1, h2, #clock {
   display: block;
   animation: 1s fadeInUp forwards; 
   animation-delay: 1.3s; 
-  margin-top: 15px;
+  margin-top: 1%;
   color: #E7EBEA
 }
 #helloText {
