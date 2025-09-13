@@ -1,14 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Newsreader');
 
 body {
-    font-family: "Inter", "DM Sans", Arial, sans-serif;
-    background-color: #0e3530  ;
+    font-family: "Newsreader", sans-serif;
+    background-image: url('moon.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    margin: 0; /* Remove default body margin */
+}
+html, body {
+  height: 100%;
 }
 
 #navBar {
+  margin-top: 1%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#intro {
+  font-size: 18px;
 }
 .quicklinks {
   font-family: "Inter", "DM Sans", Arial, sans-serif;
@@ -62,6 +75,7 @@ p, li, .hometext, h1, h2, #clock {
   }
 }
 .homeBulletPoints {
+  font-size: 16px;
   opacity: 0; 
   animation: 1s 
   fadeInUp forwards;
@@ -106,6 +120,7 @@ p, li, .hometext, h1, h2, #clock {
   color: #E7EBEA
 }
 #helloText {
+  font-size: 40px;
   opacity: 0; 
   animation: 1s 
   fadeInUp forwards;
