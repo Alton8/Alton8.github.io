@@ -8,6 +8,8 @@ body {
     background-position: center;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
+    overflow: hidden;
+
     margin: 0; /* Remove default body margin */
 }
 html, body {
@@ -29,6 +31,7 @@ html, body {
 }
 .quicklinks {
   font-family: "Inter", "DM Sans", Arial, sans-serif;
+  font-size: 24px;
   text-decoration: none;
   display: inline-flex;
   text-align: center;
