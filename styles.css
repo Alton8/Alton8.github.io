@@ -24,6 +24,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.7rem;
 }
 #intro {
   font-size: 2rem;
@@ -32,12 +33,13 @@ html, body {
   font-family: "Inter", "DM Sans", Arial, sans-serif;
   text-decoration: none;
   display: inline-flex;
+  border-radius: 10px;
   text-align: center;
   justify-content: center;
   color: #E7EBEA;
-  margin-left: 0.7rem;
-  cursor: crosshair;
-  width: 4rem;
+  margin: auto;
+  cursor: pointer;
+  width: auto;
   font-size: 1rem;
   transition: all 0.3s ease;
   padding: 1rem;
