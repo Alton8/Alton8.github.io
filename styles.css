@@ -38,6 +38,16 @@ p, li, .homeText, .hometext, h1, h2, #clock { color: var(--fg); }
   font-size: clamp(1.25rem, 1rem + 2vw, 2rem); 
 }
 
+#mail {
+  opacity: 0; 
+  animation: fadeInUp 0.2s forwards; 
+  animation-delay: 0.1s;
+}
+#linkedin {
+  opacity: 0; 
+  animation: fadeInUp 0.2s forwards; 
+  animation-delay: 0.2s;
+}
 
 #helloText{
   font-size: clamp(1.75rem, 1.25rem + 3vw, 2.5rem);
