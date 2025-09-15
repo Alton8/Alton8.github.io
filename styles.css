@@ -203,7 +203,10 @@ p, li, .homeText, .hometext, h1, h2, #clock { color: var(--fg); }
   0% { transform: translateY(15%); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
 }
-
+@keyframes fadeInDown {
+  0% { transform: translateY(-5%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
 /* Smooth horizontal scroll for emoji track */
 @keyframes scroll-left{
   from { transform: translateX(0); }
