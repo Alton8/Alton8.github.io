@@ -20,7 +20,6 @@
 - [ ] Image sizes reasonable (no multi-MB assets)
 
 ## Post-deploy (GitHub Pages)
-- [ ] Site loads at `https://<username>.github.io/<repo>/`
+- [ ] Site loads at `https://alton8.github.io/<repo>/`
 - [ ] No console errors; no broken links
 - [ ] Lighthouse (production) **≥95** all categories
-- [ ] If using a custom domain: `CNAME` file present; HTTPS enforced
