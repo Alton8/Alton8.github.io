@@ -3,9 +3,9 @@
 Simple static site (HTML/CSS/JavaScript) hosted on GitHub Pages.
 
 ## View the site
-Production: https://<your-username>.github.io/<your-repo>/
+Production: https://alton8.github.io
 
-### My Google Lighthouse scores for desktop/mobile:
+## My Google Lighthouse scores for desktop/mobile:
 
 
 
