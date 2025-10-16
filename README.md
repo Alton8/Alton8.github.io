@@ -1,4 +1,6 @@
-if you're reading this you're cool
+# Personal Website
+
+Simple static site (HTML/CSS/JavaScript) hosted on GitHub Pages.
 
 My Google Lighthouse scores for desktop/mobile:
 
