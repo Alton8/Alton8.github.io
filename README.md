@@ -1,6 +1,6 @@
 # Personal Website
 
-Simple static site (HTML/CSS/JavaScript) hosted on GitHub Pages.
+Simple static site (HTML/CSS/JavaScript) hosted on GitHub Pages.  
 👉 Live site: [https://alton8.github.io](https://alton8.github.io)
 
 ## 🛠️ Tech Stack
